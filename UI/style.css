@@ -1,0 +1,199 @@
+/* Style everything */
+* {
+    text-decoration: none;
+}
+
+/* ####################################### */
+            /* Body style */
+/* ####################################### */
+
+body {
+    margin: 10px;
+    padding: 0;
+    background: #c1bdba;
+    font-size: 16px;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+h2, p {
+    text-align: center;
+}
+
+/* ####################################### */
+            /* Header style */
+/* ####################################### */
+
+
+header {
+    background: #fff;
+    width: 100%;
+    height: 90px;
+    border-radius: 20px;
+
+}
+
+header .header-logo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 900;
+    color: #222;
+    display: block;
+    margin: 0px auto;
+    padding: 20px 0px;
+    text-align: center;
+
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+
+}
+
+header nav p {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+
+}
+
+header nav ul li {
+    display: inline-block;
+    /* float: left; */
+    list-style: none;
+    padding: 0 16px;
+}
+
+header nav ul li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #111;
+}
+
+header .header-auth{
+    display: none;
+}
+/* responsiveness of site */
+@media only screen and (min-width: 1000px){
+    header .header-logo{
+        margin: 30px 0;
+        text-align: left;
+        line-height: 40px;
+        padding: 0 20px 0 40px;
+        border-right: 3px solid #111;
+        float: left;
+    }
+
+    header nav ul {
+        float: left;
+        margin: 20px 0px;
+
+    }
+
+       header nav p {
+        float: left;
+        margin: 20px 0px;
+        padding: 20px 40px;
+
+    }
+
+
+    header nav ul li a {
+        line-height: 60px;
+    }
+
+    header .header-auth {
+        display: block;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        color: #222;
+        line-height: 40px;
+        border: 1px solid #111;
+        float: right;
+        margin-right: 40px;
+        margin-top: 29px;
+        padding: 0 20px;
+    }
+}
+
+/* ####################################### */
+            /* main style */
+/* ####################################### */
+
+
+/* The Question box should be Centered */
+#question-box {
+    position: relative;
+    margin: 8% auto 5% auto;
+    width: 350px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 25px;
+    padding:20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width:100%;
+}
+
+
+
+/* input types */
+input{
+    align-content: center;
+
+}
+
+input[type="text"]{
+    display: block;
+    color: #777;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right:50px;
+    padding: 5px;
+    width:220px;
+    height:35px;
+    border:none;
+    border-bottom: 1px solid #AAA;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+
+
+/* The submit input type */
+input[type="submit"],
+input[type="reset"]{
+    margin-top:28px;
+    width: 120px;
+    height:32px;
+    background: #16a085;
+    border:none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+
+
