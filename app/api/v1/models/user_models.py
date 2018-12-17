@@ -39,7 +39,7 @@ class UserModels():
         """
         single_user = [user for user in self.db if user['id'] == id]
         if single_user:
-            return single_user
+            return single_user[0]
         else:
             return False
 
@@ -59,16 +59,6 @@ class UserModels():
         """
         single_user = [
             user for user in self.db if user['Username'] == username]
-        if single_user:
-            return single_user
-        else:
-            return False
-
-    def delete(self, id):
-        """
-        Method for deleting a user from the mock database
-        """
-        single_user = [user for user in self.db if user['id'] == id]
         if single_user:
             return single_user
         else:
