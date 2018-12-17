@@ -11,3 +11,15 @@ StackOverflow-lite is a platform where people can ask questions and provide answ
 
 # Pages Link
 [Stack overflow](https://bakley.github.io/Stackoverflow-lite/UI/view-questions.html)
+
+## API Endpoints covered included in this branch
+
+
+| Method        |       Endpoint                        |         Description                           |
+| ------------- |       -------------                   |         -------------                         |
+| `GET`         | `/api/v1/auth/user`                   |   Gets all the users                          |
+| `GET`         | `/api/v1/auth/user/<userid>`             |   Get a user by id                            |
+| `POST`        | `/api/v1/auth/signup`                 |   Register a user                             |
+| `POST`        | `/api/v1/auth/login`                  |   Sign in a User                              |
+
+
