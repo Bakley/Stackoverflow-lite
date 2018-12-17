@@ -104,3 +104,20 @@ def login():
             "Message": "User logged in successfully",
             "data": user
         }), 200
+
+
+@version1.route('/users', methods=['GET'])
+def fetch_all_users():
+    """
+    Method to retrieve all register users
+    """
+    user = user_views.get_all_users()
+    if not user:
+        return jsonify({
+            "Message": "No user has been registered yet"
+        })
+    if user:
+        return jsonify({
+            "Message": "Successfully found the following",
+            "data": user
+        })
