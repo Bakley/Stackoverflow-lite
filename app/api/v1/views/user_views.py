@@ -1,12 +1,12 @@
 from flask import Blueprint, jsonify, json, make_response, request
 
-from app.api.v1.models.user_models import UserModels
+from app.api.v1.models import user_models
 from app.utilities.validator_functions import check_number_format, check_name_format, check_username_format, check_password_strength, check_email_format
 
 
 version1 = Blueprint('api-v1', __name__, url_prefix='/api/v1/auth')
 
-user_views = UserModels()
+user_views = user_models.UserModels()
 
 
 @version1.route('/', methods=['GET'])
@@ -121,3 +121,19 @@ def fetch_all_users():
             "Message": "Successfully found the following",
             "data": user
         })
+
+
+@version1.route('/delete/<int:id>', methods=['DELETE'])
+def delete_a_user(id):
+    """
+    Method to delete a user from database
+    """
+    user = user_views.get_one_user(id)
+    if not user:
+        return jsonify({
+            "Message": "No user with that Id found"
+        })
+    user_models.user_data.remove(user)
+    return jsonify({
+        "Message": "Successfully delete user"
+    })
