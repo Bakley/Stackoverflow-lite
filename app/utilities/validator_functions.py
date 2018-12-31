@@ -3,12 +3,19 @@ import re
 
 
 def check_for_empty_string(input_data):
-    """Checks if data presented by a user is empty."""
-    pass
+    """
+    Checks if data presented by a user is empty.
+    """
+
+    if input_data.strip() == "":
+        return 'All fields are required'
+    return None
 
 
 def check_number_format(input_number):
-    """Check if value is a number."""
+    """
+    Check if value is a number.
+    """
     try:
         int(input_number)
     except ValueError:
@@ -20,7 +27,9 @@ def check_number_format(input_number):
 
 
 def check_name_format(input_name):
-    """Checks if name is 5 Characters and No int allowed."""
+    """
+    Checks if name is 5 Characters and No integer allowed.
+    """
     length_regex = re.compile(r'.{5,}')
     length = True if length_regex.search(input_name) is not None else False
 
@@ -76,7 +85,9 @@ def check_password_strength(password):
 
 
 def check_email_format(input_email):
-    """Should be email worthy."""
+    """
+    Should be email worthy.
+    """
     if re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9.]*\.*[com|org|edu]{3}$)",
                 input_email):
         res = True

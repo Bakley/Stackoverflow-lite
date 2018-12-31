@@ -1,13 +1,14 @@
 """Initialize app."""
 import os
 from flask import Flask
-from app.api.v1.views.user_views import version1
 from dotenv import load_dotenv
+
+from app.api.v1.views.user_views import version1
 
 from config import app_config
 
 
-def create_app(config_name):
+def create_app(config_name='development'):
     """Create the app with the desired environment."""
     app = Flask(__name__)
     app.url_map.strict_slashes = False

@@ -1,9 +1,11 @@
+"""User Model file"""
+
 user_data = []
 
 
 class UserModels():
     """
-    Class with CRUD functionalities on the User resource
+    Class with CRUD functionalities on the User
     """
 
     def __init__(self):
